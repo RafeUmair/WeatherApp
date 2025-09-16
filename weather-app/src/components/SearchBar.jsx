@@ -12,14 +12,17 @@ function SearchBar({ onSearch }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="d-flex">
       <input
         type="text"
-        placeholder="Enter city"
+        className="form-control me-2 placeholder-light"
+          placeholder="Enter city"
         value={city}
         onChange={(e) => setCity(e.target.value)}
       />
-      <button type="submit">Search</button>
+      <button type="submit" className="btn btn-primary">
+        Search
+      </button>
     </form>
   );
 }
